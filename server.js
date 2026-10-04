@@ -83,6 +83,7 @@ app.get("/api/health", (req, res) => {
     ok: true,
     service: "GlobeNews",
     live: Boolean(API_KEY),
+    newsApiConfigured: Boolean(API_KEY),
     timestamp: new Date().toISOString(),
   });
 });
