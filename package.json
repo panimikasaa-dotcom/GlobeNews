@@ -1,0 +1,18 @@
+{
+  "name": "globenews-realtime",
+  "version": "2.0.0",
+  "private": true,
+  "description": "GlobeNews real-time international and national news application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
