@@ -120,7 +120,7 @@ app.get("/api/news", async (req, res) => {
   }
 });
 
-app.get("*", (req, res) => {
+app.get("/{*splat}", (req, res) => {
   res.sendFile(require("path").join(__dirname, "public", "index.html"));
 });
 
