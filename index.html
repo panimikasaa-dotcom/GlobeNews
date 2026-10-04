@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>GlobeNews — Real-Time World News</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">🌍 <span>GlobeNews</span><small>REAL-TIME</small></div>
+  <div class="status" id="status"><i></i> Menghubungkan...</div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">LIVE WORLD NEWS</p>
+      <h1>Berita dunia secara real-time</h1>
+      <p class="sub">Pilih negara dan kategori untuk melihat berita terbaru. Feed diperbarui otomatis.</p>
+    </div>
+    <button id="refreshBtn" class="primary">↻ Refresh sekarang</button>
+  </section>
+
+  <section class="controls">
+    <label>Negara
+      <select id="country">
+        <option value="id">🇮🇩 Indonesia</option>
+        <option value="us">🇺🇸 Amerika Serikat</option>
+        <option value="gb">🇬🇧 Inggris</option>
+        <option value="au">🇦🇺 Australia</option>
+        <option value="ca">🇨🇦 Kanada</option>
+        <option value="de">🇩🇪 Jerman</option>
+        <option value="fr">🇫🇷 Prancis</option>
+        <option value="it">🇮🇹 Italia</option>
+        <option value="es">🇪🇸 Spanyol</option>
+        <option value="jp">🇯🇵 Jepang</option>
+        <option value="kr">🇰🇷 Korea Selatan</option>
+        <option value="in">🇮🇳 India</option>
+        <option value="sg">🇸🇬 Singapura</option>
+        <option value="my">🇲🇾 Malaysia</option>
+        <option value="th">🇹🇭 Thailand</option>
+        <option value="br">🇧🇷 Brasil</option>
+        <option value="mx">🇲🇽 Meksiko</option>
+        <option value="za">🇿🇦 Afrika Selatan</option>
+        <option value="ae">🇦🇪 Uni Emirat Arab</option>
+        <option value="tr">🇹🇷 Turki</option>
+      </select>
+    </label>
+    <label>Kategori
+      <select id="category">
+        <option value="general">Umum</option>
+        <option value="world">Dunia</option>
+        <option value="nation">Nasional</option>
+        <option value="business">Bisnis</option>
+        <option value="technology">Teknologi</option>
+        <option value="sports">Olahraga</option>
+        <option value="science">Sains</option>
+        <option value="health">Kesehatan</option>
+        <option value="entertainment">Hiburan</option>
+      </select>
+    </label>
+    <label class="searchbox">Cari
+      <input id="search" placeholder="Cari judul berita..." autocomplete="off">
+    </label>
+  </section>
+
+  <div class="livebar">
+    <span>🔴 LIVE</span>
+    <span id="lastUpdate">Belum diperbarui</span>
+    <span>Auto-refresh: <b>30 detik</b></span>
+  </div>
+
+  <section id="notice" class="notice hidden"></section>
+  <section id="newsGrid" class="grid"></section>
+</main>
+
+<footer>GlobeNews • Gunakan API berita yang memiliki hak distribusi yang sesuai.</footer>
+<script src="app.js"></script>
+</body>
+</html>
