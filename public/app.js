@@ -44,8 +44,8 @@ async function health() {
   try {
     const r = await fetch("/api/health");
     const d = await r.json();
-    $("status").innerHTML = d.liveNewsConfigured ? "<i></i> LIVE NEWS AKTIF" : "<i></i> API BELUM DIATUR";
-    $("status").style.color = d.liveNewsConfigured ? "#86efac" : "#fbbf24";
+    $("status").innerHTML = d.live ? "<i></i> LIVE NEWS AKTIF" : "<i></i> API BELUM DIATUR";
+    $("status").style.color = d.live ? "#86efac" : "#fbbf24";
   } catch {
     $("status").textContent = "Server tidak tersambung";
   }
